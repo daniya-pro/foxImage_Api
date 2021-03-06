@@ -1,0 +1,9 @@
+fetch("https://randomfox.ca/floof/").then(
+(res)=>res.json()
+)
+.then(data=>{
+    document.getElementById("foxImage").src=data.image
+    console.log(data)
+    document.getElementById("loader").style.display='none'
+    document.getElementById("foxImage").style.display='block';
+    })
